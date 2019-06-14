@@ -77,6 +77,16 @@ drake.on('drop', function (el, target) {
     getRecipeFromCard(el);
 })
 
+
+//Save the recipe that the user has selected to the database 
+function pushSavedRecipe(recipe, meal) {
+    //Save the recipe to Firebase
+    database.ref(userID + '/' + currentDay + "/" + meal).set({
+        recipe: recipe
+    });
+
+}
+
 var meals = ['breakfast', 'lunch', 'dinner'];
 //retrieve the current user's recipes from the database for the given day
 function getSavedRecipes(day) {
@@ -186,48 +196,5 @@ function getRecipeFromCard(card) {
 
     var meal = $(card).parent().attr("id");
 
-    addRecipeToDB(recipe, meal);
-}
-
-
-
-//Save the recipe that the user has selected to the database 
-function addRecipeToDB(recipe, meal) {
-    //Save the recipe to Firebase
-    database.ref(userID + '/' + currentDay + "/" + meal).set({
-        recipe: recipe
-    });
-
-}
-var favorites = "";
-$(document).on("click", ".toggleFavBut", function () {
-    console.log("favorited")
-    $(this).toggleClass('favoriteButton far');
-    $(this).toggleClass('favoritedButton fas fa-2x');
-
-
-    var ingredients = [];
-
-    //build an array of the ingredients for the recipe that was clicked
-    $(this).parent().find(".list-group-item").each(function () {
-        ingredients.push($(this).text())
-    })
-    var recipe = {
-        image: $(this).parent().find(".card-img-top").attr("src"),
-        label: $(this).parent().find(".card-title").text(),
-        ingredientLines: ingredients,
-        url: $(this).parent().find("a").attr("href")
-    };
-    pushFavorites(recipe);
-});
-var userID;
-
-var favorites = "";
-//Save the recipe that the user has selected to the database 
-function pushFavorites(recipe) {
-    //Save the recipe to Firebase
-    database.ref(userID + '/' + favorites + "/").push({
-        recipe: recipe
-    });
-
+    pushSavedRecipe(recipe, meal);
 }
