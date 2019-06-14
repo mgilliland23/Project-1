@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HH Home</title>
+
+    <!-- JavaScript Link -->
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script> -->
+
+    <!-- Bootstrap Link -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Custom Style Link -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="https://kit.fontawesome.com/59a7a76dd2.js"></script>
+
+    <!-- Animate.css CDN Link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+    <!--Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=EB+Garamond&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <!-- Navbar -->
+    <header class="">
+        <nav class="navbar navbar-expand-md h-font navbar-light ">
+            <div class="navbar-brand">
+                <h1 href="#" class="nav float-left icon ">HH</h1>
+            </div>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class=" navbar-nav ml-auto nav-font">
+                    <li class="nav-item active ">
+                        <a class="nav-link ks-nav " href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link ks-nav" data-toggle="modal" data-target="#loginModal" href="#">Login</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <!-- Page Introduction -->
+    <div class="container main">
+        <div class="row">
+            <div class="col-md-12 border ks-container m-5">
+                <section class="p-4">
+                    <h2 class="text-center border-bottom h-font">Welcome To Health Hero</h2>
+                    <p> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iure quia nulla provident ipsam
+                        reiciendis, iste
+                        placeat numquam optio impedit necessitatibus laudantium consequatur suscipit fuga similique est
+                        tempore
+                        molestias possimus veniam!
+                    </p>
+                </section>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4 border mx-auto text-center ks-container ">
+                <div class="wrapper fadeInDown">
+                    <div id="formContent" class="p-4">
+                        <!-- Tabs Titles -->
+                        <!-- Icon -->
+                        <div class="m-2 mt-2">
+                            <i class="far fa-user fa-3x"></i>
+                        </div>
+                        <!-- Login Form -->
+                        <form>
+                            <div class="form-group">
+                                <label for="username">Email</label>
+                                <input type="text" class="mx-auto m-2 onNewLine" id="inputUsername"
+                                    placeholder="email@gmail.com">
+                            </div>
+                            <div class="form-group">
+                                <label for="password">Password</label>
+                                <input type="password" class="mx-auto m-2 onNewLine" id="inputPassword"
+                                    placeholder="Password">
+                            </div>
+                            <button type="login" class="mx-auto ks-button" id="signup" value="signup">Sign up!</button>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal -->
+        <div class="modal" id="loginModal" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div
+                    class="col-md-12 border mx-auto text-center ks-container modal-body modal-content modal-content-logs modal-content-logs">
+
+                    <div class="ks-container">
+
+                        <div class="modal-close-button">
+                            <button type="button" class="close closeButton" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;<span>
+                            </button>
+                        </div>
+
+                        <div id="formContent" class="p-4">
+                            <!-- Tabs Titles -->
+                            <!-- Icon -->
+                            <div class="m-2 mt-2">
+                                <i class="far fa-user fa-3x"></i>
+                            </div>
+                            <!-- Login Form -->
+                            <form>
+                                <div class="form-group">
+                                    <label for="username">Username</label>
+                                    <input type="text" class="mx-auto m-2 onNewLine" id="loginUsername"
+                                        placeholder="Username">
+                                </div>
+                                <div class="form-group">
+                                    <label for="password">Password</label>
+                                    <input type="password" class="mx-auto m-2 onNewLine" id="loginPassword"
+                                        placeholder="Password">
+                                </div>
+                                <button type="login" class="mx-auto ks-button" id="login" value="login">Sign in</button>
+                            </form>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <!-- modal -->
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class=" text-center mt-auto">
+        <div>© 2019 Health Hero</div>
+    </footer>
+
+    <!-- Bootstrap Script Links -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-firestore.js"></script>
+    <!-- TODO: Add SDKs for Firebase products that you want to use https://firebase.google.com/docs/web/setup#config-web-app -->
+    <script src="assets/JavaScript/auth.js"></script>
+</body>

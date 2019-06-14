@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Meal Planner</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <script src="https://kit.fontawesome.com/59a7a76dd2.js"></script>
+
+    <!-- Animate.css CDN Link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+
+    <!--Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=EB+Garamond&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Rammetto+One&display=swap" rel="stylesheet">
+
+    <!--dragula stylesheets-->
+    <link rel="stylesheet" href="assets/dist/dragula.css">
+    <link rel="stylesheet" href="assets/dist/dragula.min.css">
+
+    <!-- Firebase Scripts -->
+    <script src="https://www.gstatic.com/firebasejs/6.1.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.1.0/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-firestore.js"></script>
+
+
+
+</head>
+
+<body class="main">
+    <!-- Navbar -->
+    <header class="">
+        <nav class="navbar navbar-expand-md h-font navbar-light ">
+            <div class="navbar-brand">
+                <h1 href="#" class="nav float-left icon ">HH</h1>
+            </div>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class=" navbar-nav ml-auto nav-font">
+                    <li class="nav-item active">
+                        <a class="nav-link ks-nav" href="meal-horizontal-grid.html">Meal Plan</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link ks-nav " href="shopping-list.html">Shopping List</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link ks-nav" id="logout" href="#">Logout</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <section class="container">
+        <!--Weekly Plan Row-->
+        <div class="row">
+            <div class="col-md-12 border text-center">
+                <!-- Week Cards -->
+                <!---------------------------------------->
+                <button type="button" name="weekButton" class="ks-weekButtons ks-weekButtons-toggle selectedDay"
+                    id="Monday">
+                    <div class="week-cards">
+                        <div class="">
+                            <h5 class="card-title text-center">Monday</h5>
+                        </div>
+                    </div>
+                </button>
+
+                <button type="button" name="weekButton" class="ks-weekButtons ks-weekButtons-toggle" id="Tuesday">
+                    <div class="week-cards">
+                        <div class="">
+                            <h5 class="card-title text-center">Tuesday</h5>
+                        </div>
+                    </div>
+                </button>
+
+                <button type="button" name="weekButton" class="ks-weekButtons ks-weekButtons-toggle" id="Wednesday">
+                    <div class="week-cards">
+                        <div class="">
+                            <h5 class="card-title text-center">Wednesday</h5>
+                        </div>
+                    </div>
+                </button>
+
+                <button type="button" name="weekButton" class="ks-weekButtons ks-weekButtons-toggle" id="Thursday">
+                    <div class="week-cards">
+                        <div class="">
+                            <h5 class="card-title text-center">Thursday</h5>
+                        </div>
+                    </div>
+                </button>
+
+                <button type="button" name="weekButton" class="ks-weekButtons ks-weekButtons-toggle" id="Friday">
+                    <div class="week-cards">
+                        <div class="">
+                            <h5 class="card-title text-center">Friday</h5>
+                        </div>
+                    </div>
+                </button>
+
+                <button type="button" name="weekButton" class="ks-weekButtons ks-weekButtons-toggle" id="Saturday">
+                    <div class="week-cards">
+                        <div class="">
+                            <h5 class="card-title text-center">Saturday</h5>
+                        </div>
+                    </div>
+                </button>
+
+                <button type="button" name="weekButton" class="ks-weekButtons ks-weekButtons-toggle" id="Sunday">
+                    <div class="week-cards">
+                        <div class="">
+                            <h5 class="card-title text-center">Sunday</h5>
+                        </div>
+                    </div>
+                </button>
+                <!----------------------------->
+                <!-- End of Week Cards -->
+            </div>
+        </div>
+        <!--Day Plan-->
+
+        <div class="row ks-container" id="dailyMealsContainer">
+
+            <div class="col-md-4 text-center">
+                <h2 class="meal-header">Breakfast</h2>
+                <div id="breakfast" class="holder meal-holder element mx-auto animated fadeInLeftBig gradient">
+                    <!-- <h2>DRAG MEAL HERE</h2> -->
+                </div>
+            </div>
+
+            <div class="col-md-4 text-center">
+                <h2 class="meal-header">Lunch</h2>
+                <div id="lunch" class="holder meal-holder element mx-auto animated fadeInUpBig gradient">
+                    <!-- <h2>DRAG MEAL HERE</h2> -->
+                </div>
+            </div>
+
+            <div class="col-md-4 text-center">
+                <h2 class="meal-header">Dinner</h2>
+                <div id="dinner" class="holder meal-holder element mx-auto animated fadeInRightBig gradient">
+                    <!-- <h2>DRAG MEAL HERE</h2> -->
+                </div>
+            </div>
+
+        </div>
+
+        <!--Recipe Search-->
+        <div class="row ks-container carousel-container">
+
+            <div class="col-md-12 border text-center mx-auto">
+                <div id="carouselExampleControls" class="carousel slide carousel-container">
+                    <div class="carousel-inner slideContainer">
+                        <div id="searchResults" class="container imageContainer mx-auto">
+                            <div class="carousel-item active" id="firstSlide">
+                            </div>
+                            <div class="carousel-item" id="secondSlide">
+                            </div>
+                            <div class="carousel-item" id="thirdSlide">
+                            </div>
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+                <form class="form-inline justify-content-center search-box">
+                    <label class="form-group">Search Recipes</label>
+                    <div class="form-group mx-sm-3 mb-2 mt-2">
+                        <label for="searchTerm" class="sr-only">Search Recipes</label>
+                        <input type="text" class="form-control" id="searchTerm"
+                            placeholder="Search by name, ingredient, etc...">
+                    </div>
+                    <button type="submit" id="submit" class="ks-button-form-submit searchButton">Search</button>
+                </form>
+
+            </div>
+        </div>
+
+        <!-- Modal -->
+        <div class="modal modalIngredients fade" id="ingredientsModal" tabindex="-1" role="dialog"
+            aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+
+            <div class="modal-dialog modal-dialog-ingredients" role="document">
+                <div class="modal-content modal-content-ingredients">
+                    <div class="modal-header modal-header-ingredients">
+                        <h5 class="modal-title" id="exampleModalLongTitle">Ingredients</h5>
+                        <button type="button" class="close closeButton" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modalDump">
+                    </div>
+                    <div class="modal-footer">
+                        <span class=" recipe-dump text-center"></span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class=" text-center mt-auto">
+        <div>© 2019 Health Hero</div>
+    </footer>
+    <!--Simple script to toggle classes on heart icon-->
+    <script>
+        //Added the toggle fav function here so it can work with the loaded items
+        $('.toggleFavBut').click(function () {
+            console.log("favorited")
+            $(this).toggleClass('favoriteButton far');
+            $(this).toggleClass('favoritedButton fas fa-2x');
+        });
+        /* Adds the carousel buttons on submit click */
+        $(".searchButton").on("click", function () {
+            setTimeout(function () {
+                $(".carousel-control-prev-icon").css("display", "block");
+                $(".carousel-control-next-icon").css("display", "block");
+            }, 1000);
+        });
+
+        $(".ks-weekButtons-toggle").on("click", function () {
+
+            $(this).siblings().removeClass("selectedDay");
+            $(this).addClass("selectedDay");
+
+            // $(this).toggleClass("unSelectedDay");
+
+        });
+    </script>
+
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/dragula/3.7.2/dragula.min.js'></script>
+    <script src="assets/dist/dragula.js"></script>
+    <script src="assets/JavaScript/drag-and-drop-logic.js"></script>
+    <script src="assets/JavaScript/gradientLogic-and-modal.js"></script>
+    <script src="assets/JavaScript/recipe-logic.js"></script>
+    <script src="assets/JavaScript/database-logic.js"></script>
+
+
+</body>
+
+</html>

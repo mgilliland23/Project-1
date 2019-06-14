@@ -1,0 +1,635 @@
+/* General Styles Start */
+
+/*-----------------------*/
+
+html {
+    position: relative;
+    /*for sticky footer */
+    min-height: 100%;
+    /*for sticky footer */
+}
+
+body {
+    background: url("../images/seamless_paper_texture.png");
+    margin-bottom: 40px;
+    /*for sticky footer */
+    color: #212121;
+}
+
+.ks-container {
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 5px;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    padding: 0px;
+}
+
+/* Fonts */
+
+.h-font {
+    font-family: 'EB Garamond', serif;
+}
+
+.icon {
+    font-size: 2.8rem;
+    color: #42611F;
+}
+
+/*Navigation Bar*/
+
+.navbar-light .navbar-nav .active>.nav-link {
+    color: #42611F;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: rgb(118, 173, 55);
+}
+
+.navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover {
+    font-size: 22px;
+    transition: .5s ease;
+    color: #42611F;
+}
+
+.ks-nav {
+    font-size: 1.2rem;
+    border-right: 1px solid rgb(118, 173, 55);
+    padding: 0;
+}
+
+.navbar-nav li:last-child a {
+    border: none;
+}
+
+.navbar {
+    overflow: hidden;
+    padding: 0px 25px;
+    background-color: rgb(243, 241, 237);
+    position: fixed;
+    /* Set the navbar to fixed position */
+    top: 0;
+    /* Position the navbar at the top of the page */
+    width: 100%;
+    /* Full width */
+    z-index: 1;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+/*Footer*/
+
+footer {
+    background-color: rgba(255, 255, 255, 0.5);
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    /*vertically centers */
+}
+
+/* KS-Button Styles */
+
+.ks-button {
+    background-color: rgb(118, 173, 55);
+    color: #fff;
+    display: inline-block;
+    font-weight: 400;
+    text-align: center;
+    vertical-align: middle;
+    /*   background-color: transparent; */
+    border: none;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: 0.25rem;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.ks-button:hover {
+    color: #fff;
+    background-color: #42611F;
+    border-color: #42611F;
+    text-decoration: none;
+}
+
+.ks-button:focus {
+    box-shadow: 0 0 0 0.2rem rgba(118, 173, 55, 0.5);
+    outline: 0;
+}
+
+.ks-button:active {
+    color: #fff;
+    background-color: #42611F;
+    border-color: #42611F;
+}
+
+/*-----------------------*/
+
+/* General Styles End */
+
+/* Home Page Styles Start */
+
+/*-----------------------------*/
+
+.main {
+    margin-top: 78px;
+    margin-bottom: 78px;
+}
+
+/*-Login-- */
+
+#login {
+    display: block;
+}
+
+#password {
+    display: block;
+}
+
+.fa-user {
+    color: rgb(118, 173, 55);
+}
+
+input {
+    border-radius: 5px;
+    border-style: none;
+    padding: 5px;
+}
+
+input:focus {
+    outline: none;
+    box-shadow: 0 0 0 0.1rem rgba(118, 173, 55, 0.5);
+}
+
+.onNewLine {
+    display: block;
+}
+
+a {
+    color: rgb(118, 173, 55);
+}
+
+a:hover {
+    color: #42611F;
+}
+
+/*-----------------------------*/
+
+/* Home Page Styles End */
+
+/* Meal Plan Page styles Start */
+
+/*----------------------------------*/
+
+/* Week Day Buttons */
+
+.week-cards {
+    /* display: inline-block; */
+    width: 8rem;
+    float: left;
+    margin: 0.5px;
+    margin-top: 10px;
+}
+
+button div div h5 {
+    font-size: 0.85rem;
+    color: #fff;
+}
+
+.ks-weekButtons {
+    background-color: rgb(118, 173, 55);
+    color: #fff;
+    display: inline-block;
+    font-weight: 400;
+    text-align: center;
+    vertical-align: middle;
+    /*   background-color: transparent; */
+    border: none;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: 0.25rem;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.ks-weekButtons:hover {
+    color: #fff;
+    background-color: #42611F;
+    border-color: #42611F;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.selectedDay {
+    background-color: #42611F;
+    outline: 0;
+    border-style: outset;
+    border-color: rgba(255, 255, 255, 0.5);
+    /* transform: translate(0px,5px); */
+}
+
+.unSelectedDay {
+    transform: none;
+}
+
+/* .ks-weekButtons:focus {
+    background-color: #42611F;
+    outline: 0;
+    border-style: outset;
+    border-color: rgba(255, 255, 255, 0.5);
+    transform: translate(0px, 5px);
+} */
+
+.carousel-inner {
+    padding-top: 20px;
+}
+
+form {
+    margin-bottom: 20px;
+}
+
+.ks-weekButtons:active {
+    color: #fff;
+    background-color: #42611F;
+    border-color: #42611F;
+    transform: translate(0px, 5px);
+    cursor: progress;
+}
+
+/********************************/
+
+/* Breakfast lunch Dinner Styles */
+
+.meal-holder {
+    /* width: 202px; */
+    /* height: 302px; */
+    width: 14rem;
+    height: 18.5rem;
+    background-color: #000000;
+    padding: 0px;
+    margin: 0px;
+    border-radius: .25rem;
+}
+
+.meal-header {
+    /* color: #42611F; */
+    color: gold;
+    font-family: 'Rammetto One', cursive;
+    font-size: 25px;
+    margin-top: 10px;
+    text-shadow: 4px 4px 4px #42611F, -4px 4px 4px #42611F, 4px 4px 4px #42611F, -4px 4px 4px #42611F;
+}
+
+.meal-header:after {
+    content: "";
+    display: block;
+    margin: 0 auto;
+    width: 75%;
+    border-bottom: 5px double #42611F;
+}
+
+/* Gradient Style */
+
+.gradient {
+    width: 14rem;
+    height: 16rem;
+    /* width: 202px; */
+    /* height: 302px; */
+    padding: 0px;
+    margin: 0px;
+    border-radius: 10%;
+}
+
+/********************************/
+
+/* Save Button Styles */
+
+.save-margin {
+    margin: 5px 0px;
+}
+
+/*****************************/
+
+/* Form styling */
+
+#searchTitleSpacing {
+    margin-top: 10px;
+}
+
+#submitButtonSpacing {
+    margin: 20px;
+}
+
+/*Search Box */
+
+.search-box {
+    background-color: none;
+    margin-top: 0px;
+}
+
+#searchTerm {
+    width: 24rem;
+}
+
+.ks-button-form-submit {
+    width: 80px;
+    height: 30px;
+    background-color: rgb(118, 173, 55);
+    color: #fff;
+    display: inline-block;
+    font-weight: 400;
+    text-align: center;
+    vertical-align: middle;
+    /*   background-color: transparent; */
+    border: none;
+    padding-top: 2px;
+    padding-bottom: 5px;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: 0.25rem;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    cursor: pointer;
+}
+
+.ks-button-form-submit:hover {
+    color: #fff;
+    background-color: #42611F;
+    border-color: #42611F;
+}
+
+.ks-button-form-submit:focus {
+    box-shadow: 0 0 0 0.2rem rgba(118, 173, 55, 0.5);
+    outline: 0;
+}
+
+.ks-button-form-submit:active {
+    color: #fff;
+    background-color: #42611F;
+    border-color: #42611F;
+}
+
+/********************************************/
+
+/* Results Slide */
+
+.slideContainer {
+    padding-left: 90px;
+}
+
+/* .imageContainer {
+    padding-left: 30px;
+} */
+
+.ks-card {
+    /* width: 202px; */
+    /* height: 302px; */
+    width: 14rem;
+    height: 16rem;
+    margin: auto;
+    float: left;
+    margin-bottom: 10px;
+    /* margin: 0px 5px;  */
+    cursor: grabbing;
+}
+
+.ks-card:hover {
+    cursor: grab;
+}
+
+.ks-card:active {
+    cursor: grabbing;
+}
+
+.card-img-top {
+    /* width: 202px; */
+    /* height: 124px; */
+    width: 10rem;
+    height: 10rem;
+    margin: 5px auto;
+    margin-top: 5px
+}
+
+.card-body {
+    position: relative;
+    /*relative position for heart button */
+    padding-top: 5px;
+}
+
+.hiddenIngredientList {
+    display: none;
+}
+
+.card-title {
+    font-size: 1em;
+}
+
+.ks-button-recipe {
+    /* width: 125px;   */
+    /* height: 35px; */
+    width: 8rem;
+    background-color: rgb(118, 173, 55);
+    color: #fff;
+    display: block;
+    font-weight: 400;
+    text-align: center;
+    /*     vertical-align: middle; */
+    /*   background-color: transparent; */
+    border: none;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: 0.25rem;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    margin: 0 auto;
+    margin-top: 5px;
+    cursor: pointer;
+}
+
+.ks-button-recipe:hover {
+    color: #fff;
+    background-color: #42611F;
+    border-color: #42611F;
+}
+
+.ks-button-recipe:focus {
+    box-shadow: 0 0 0 0.2rem rgba(118, 173, 55, 0.5);
+    outline: 0;
+}
+
+.ks-button-recipe:active {
+    color: #fff;
+    background-color: #42611F;
+    border-color: #42611F;
+}
+
+.favoriteButton {
+    color: rgb(252, 252, 252);
+    background-color: transparent;
+    border-color: transparent;
+    box-shadow: none;
+    position: absolute;
+    display: block;
+    cursor: pointer;
+    top: -200%;
+    left: 77%;
+}
+
+.favoriteButton:hover {
+    color: rgba(176, 27, 4, .5);
+    transition: .8s ease;
+}
+
+.favoritedButton {
+    background-color: transparent;
+    border-color: transparent;
+    box-shadow: none;
+    color: rgb(176, 27, 4);
+    position: absolute;
+    display: block;
+    cursor: pointer;
+    top: -200%;
+    left: 73%;
+}
+
+.carousel-control-prev {
+    display: block;
+    width: 0px;
+    height: 0px;
+}
+
+.carousel-control-prev-icon {
+    /* margin-right: 120px; */
+    margin-top: 150px;
+    background-color: rgb(118, 173, 55);
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    border-style: solid;
+    border-color: gold;
+    display: none;
+}
+
+.carousel-control-next {
+    display: block;
+    width: 0px;
+    height: 0px;
+}
+
+.carousel-control-next-icon {
+    margin-left: -28px;
+    margin-top: 150px;
+    background-color: rgb(118, 173, 55);
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    border-style: solid;
+    border-color: gold;
+    display: none;
+}
+
+/**************************************************/
+
+/* Favorites Container */
+
+/* .favorite-container {
+    background-color: rgb(118, 173, 55);
+} */
+
+/**************************************************/
+
+/*---------------------------------*/
+
+/* Meal Plan Page styles End */
+
+/* Modal Styles */
+
+.modalIngredients {
+    background-color: rgba(118, 173, 55, 0.2);
+}
+
+.modalDump {
+    padding: 0;
+    padding-top: 15px;
+}
+
+.modal-header-ingredients {
+    color: #fff;
+}
+
+.modal-dialog-ingredients {
+    width: 70%;
+}
+
+.modal-content-ingredients {
+    color: #fff;
+    background-color: rgb(118, 173, 55);
+    margin: 20% auto;
+    padding: 10px;
+    width: 70%;
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.17)
+}
+
+.list-group-item {
+    background-color: #42611F;
+}
+
+.closeButton {
+    color: #000000;
+    font-size: 30px;
+}
+
+.closeButton:hover, .closeButton:focus {
+    color: #fff;
+}
+
+.ks-button-close {
+    width: 8rem;
+    background-color: #42611F;
+    color: #fff;
+    display: block;
+    font-weight: 400;
+    text-align: center;
+    /*     vertical-align: middle; */
+    /*   background-color: transparent; */
+    border: none;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: 0.25rem;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    margin: 0 auto;
+    margin-top: 5px;
+    cursor: pointer;
+}
+
+.ks-button-close:hover, .ks-button-close:focus {
+    color: #fff;
+    background-color: gold;
+    border-color: gold;
+    box-shadow: 0 0 0 0.2rem rgba(118, 173, 55, 0.5);
+    outline: 0;
+}
+
+.recipe-dump {
+    margin: 0 auto
+}
+
+.modal-footer-login {
+    border-top: none;
+    padding-bottom: 20px;
+}
+
+.modal-content-logs {
+    background: url("../images/seamless_paper_texture.png");
+}
+
+.closeButton-logs:hover, .closeButton-logs:focus {
+    color: #fff;
+}
+
+.modal-content-logs {
+    margin: 20% auto;
+}
+
+.recipe-link {
+    display: none;
+}
