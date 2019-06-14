@@ -88,7 +88,6 @@ function getSavedRecipes(day) {
                 console.log(recipe);
                 console.log(meal);
                 buildSavedRecipeCard(recipe, meal);
-
             });
         });
     })
@@ -155,12 +154,6 @@ function buildSavedRecipeCard(recipe, meal) {
     else if (meal === 'dinner') {
         $("#dinner").append(recipeCard);
     }
-    //To toggle the favorite button when the card is in the meal plan
-    $('.toggleFavBut').click(function () {
-        console.log("favorited")
-        $(this).toggleClass('favoriteButton far');
-        $(this).toggleClass('favoritedButton fas fa-2x');
-    });
 }
 
 function removeRecipeFromDB(meal) {
@@ -199,7 +192,7 @@ function addRecipeToDB(recipe, meal) {
     });
 
 }
-var favorites = "";
+
 $(document).on("click", ".toggleFavBut", function () {
     console.log("favorited")
     $(this).toggleClass('favoriteButton far');
@@ -210,13 +203,13 @@ $(document).on("click", ".toggleFavBut", function () {
 
     //build an array of the ingredients for the recipe that was clicked
     $(this).parent().find(".list-group-item").each(function () {
-        ingredients.push($(this).text())
+        ingredients.push($(this).parent().parent().text())
     })
     var recipe = {
-        image: $(this).parent().find(".card-img-top").attr("src"),
-        label: $(this).parent().find(".card-title").text(),
+        image: $(this).parent().parent().find(".card-img-top").attr("src"),
+        label: $(this).parent().parent().find(".card-title").text(),
         ingredientLines: ingredients,
-        url: $(this).parent().find("a").attr("href")
+        url: $(this).parent().parent().find("a").attr("href")
     };
     pushFavorites(recipe);
 });
@@ -226,7 +219,7 @@ var favorites = "";
 //Save the recipe that the user has selected to the database 
 function pushFavorites(recipe) {
     //Save the recipe to Firebase
-    database.ref(userID + '/' + favorites + "/").push({
+    database.ref(userID + "/favorites").push({
         recipe: recipe
     });
 

@@ -389,6 +389,8 @@ form {
     margin-bottom: 10px;
     /* margin: 0px 5px;  */
     cursor: grabbing;
+    background-color:rgba(255, 255, 255, 0.5);
+    border-radius: 10%;
 }
 
 .ks-card:hover {
@@ -469,8 +471,8 @@ form {
     position: absolute;
     display: block;
     cursor: pointer;
-    top: -200%;
-    left: 77%;
+    top: -170%;
+    left: 65%;
 }
 
 .favoriteButton:hover {
@@ -486,8 +488,8 @@ form {
     position: absolute;
     display: block;
     cursor: pointer;
-    top: -200%;
-    left: 73%;
+    top: -170%;
+    left: 65%;
 }
 
 .carousel-control-prev {
@@ -633,3 +635,14 @@ form {
 .recipe-link {
     display: none;
 }
+
+/* Shopping List styles*/
+
+    .shop-list-group {
+    
+    }
+    .shop-list-item {
+         background-color: rgba(255, 255, 255, 0.3);
+         width: 60%;
+         margin: 0 auto;
+    }
