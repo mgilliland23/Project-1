@@ -125,8 +125,8 @@ function buildSavedRecipeCard(recipe, meal) {
     var ingredientsButton = $("<button>").addClass("ks-button-recipe ingredientsButtonClick").attr("data-toggle", "modal").attr("data-target", "#ingredientsModal").text("Ingredients");
     ingredientsButton.on("click", function () {
         console.log("ingredient button clicked")
-        $(".modalDump").empty();
-        $(".recipe-dump").empty(); //recipe link
+        // $(".modalDump").empty();
+        // $(".recipe-dump").empty(); //recipe link
         var clickedRecipeCard = $(this).parent();
 
         console.log(ingredients);

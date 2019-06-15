@@ -72,8 +72,8 @@ function buildRecipeCards(recipes) {
 
         /* Ingredients Modal Logic */
         $(".ingredientsButtonClick").on("click", function () {
-            $(".modalDump").empty();
-            $(".recipe-dump").empty(); //recipe link
+            // $(".modalDump").empty();
+            // $(".recipe-dump").empty(); //recipe link
             var clickedRecipeCard = $(this).parent();
             var ingredients = clickedRecipeCard.find(".hiddenIngredientList").html();
             console.log("ingredients are" + ingredients);
