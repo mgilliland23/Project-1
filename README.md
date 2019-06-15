@@ -3,6 +3,7 @@ A meal planner with the ability to drag and drop for each day of the week in bre
 
 ## Images
 <img src="assets/images/screenshot-of-home.jpg" width="500">
+https://mgilliland23.github.io/Project-1/index.html
 
 ## Built With
 
