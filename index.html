@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>HH Home</title>
+    <title>Health Hero Home</title>
 
     <!-- JavaScript Link -->
     <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script> -->
@@ -20,17 +20,28 @@
 
     <!-- Animate.css CDN Link -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+    
     <!--Google fonts-->
     <link href="https://fonts.googleapis.com/css?family=EB+Garamond&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Rammetto+One&display=swap" rel="stylesheet">
+
+    <!-- Favicon  Link-->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon_package_v0.16 (2)/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon_package_v0.16 (2)/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon_package_v0.16 (2)/favicon-16x16.png">
+    <link rel="manifest" href="assets/favicon_package_v0.16 (2)/site.webmanifest">
+    <link rel="mask-icon" href="assets/favicon_package_v0.16 (2)/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#00aba9">
+    <meta name="theme-color" content="#ffffff">
 
 </head>
 
-<body>
+<body class="main">
     <!-- Navbar -->
     <header class="">
         <nav class="navbar navbar-expand-md h-font navbar-light ">
             <div class="navbar-brand">
-                <h1 href="#" class="nav float-left icon ">HH</h1>
+                <h1 href="#" class="nav float-left icon animated">Health <img class="HHlogo animated bounceInDown slow" src="assets/images/apple-large.png"> Hero</h1>
             </div>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -51,15 +62,28 @@
     <!-- Page Introduction -->
     <div class="container main">
         <div class="row">
-            <div class="col-md-12 border ks-container m-5">
+            <div class="col-md-12 border ks-container m-4">
                 <section class="p-4">
-                    <h2 class="text-center border-bottom h-font">Welcome To Health Hero</h2>
-                    <p> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iure quia nulla provident ipsam
-                        reiciendis, iste
-                        placeat numquam optio impedit necessitatibus laudantium consequatur suscipit fuga similique est
-                        tempore
-                        molestias possimus veniam!
-                    </p>
+                    <h2 class="text-center border-bottom h-font icon">Welcome To Health<img class="HHlogo2 animated infinite pulse faster" src="assets/images/apple-large.png">Hero</h2>
+                    <div class="row">
+                        <div class="homeContent-left col-md-6 ">
+                            <h3 class="text-center h-font homeHeader">Purpose</h3>
+                            <p class="text-center h-font welcomeContent"> The quest to becoming a Health Hero starts here!
+                                Health Hero easily 
+                                tracks your eating habits through innovative meal planning.
+                                We give Health Heroes the incentive to lead a healthy lifestyle
+                            </p>
+                        </div>
+                        
+                        <div class="homeContent-right col-md-6">
+                            <h3 class="text-center h-font homeHeader">Features</h3>
+                            <div class="text-center h-font welcomeContent">
+                                <p>Meal Planner with a drag and drop function</p>
+                                <p>Save your favorite meals</p>
+                                <p>Shopping List of ingredients</p>
+                            </div>
+                        </div>
+                    </div>
                 </section>
             </div>
         </div>
@@ -137,7 +161,7 @@
 
     <!-- Footer -->
     <footer class=" text-center mt-auto">
-        <div>© 2019 Health Hero</div>
+        <div class="h-font footerText">© 2019 Health<img class="HHlogoFooter" src="assets/images/apple-large.png">Hero</div>
     </footer>
 
     <!-- Bootstrap Script Links -->
@@ -158,3 +182,5 @@
     <!-- TODO: Add SDKs for Firebase products that you want to use https://firebase.google.com/docs/web/setup#config-web-app -->
     <script src="assets/JavaScript/auth.js"></script>
 </body>
+
+</html>

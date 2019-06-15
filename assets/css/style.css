@@ -7,6 +7,7 @@ html {
     /*for sticky footer */
     min-height: 100%;
     /*for sticky footer */
+    min-width: 100%;
 }
 
 body {
@@ -27,6 +28,20 @@ body {
 
 .h-font {
     font-family: 'EB Garamond', serif;
+}
+
+.homeHeader {
+    margin-bottom: 10px;
+    color: gold;
+    font-family: 'Rammetto One', cursive;
+    font-size: 25px;
+    margin-top: 10px;
+    text-shadow: 4px 4px 4px #42611F, -4px 4px 4px #42611F, 4px 4px 4px #42611F, -4px 4px 4px #42611F;
+}
+
+.welcomeContent {
+    font-size: 20px;
+    color: #42611F;
 }
 
 .icon {
@@ -74,6 +89,12 @@ body {
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
 }
 
+.HHlogo {
+    width: 30px;
+    height: 40px;
+    margin-top: 3px;
+}
+
 /*Footer*/
 
 footer {
@@ -84,6 +105,17 @@ footer {
     height: 40px;
     line-height: 40px;
     /*vertically centers */
+}
+
+.footerText {
+    color: #42611F;
+    font-size: 12px;
+}
+
+.HHlogoFooter {
+    width: 7px;
+    height: 10px;
+    margin-bottom: 5px;
 }
 
 /* KS-Button Styles */
@@ -133,6 +165,12 @@ footer {
 .main {
     margin-top: 78px;
     margin-bottom: 78px;
+}
+
+.HHlogo2 {
+    width: 30px;
+    height: 40px;
+    margin-bottom: 20px;
 }
 
 /*-Login-- */
@@ -224,7 +262,7 @@ button div div h5 {
     outline: 0;
     border-style: outset;
     border-color: rgba(255, 255, 255, 0.5);
-    /* transform: translate(0px,5px); */
+    transform: translate(0px, 5px);
 }
 
 .unSelectedDay {
@@ -237,14 +275,6 @@ button div div h5 {
     border-style: outset;
     border-color: rgba(255, 255, 255, 0.5);
     transform: translate(0px, 5px);
-} */
-
-.carousel-inner {
-    padding-top: 20px;
-}
-
-form {
-    margin-bottom: 20px;
 }
 
 .ks-weekButtons:active {
@@ -253,7 +283,7 @@ form {
     border-color: #42611F;
     transform: translate(0px, 5px);
     cursor: progress;
-}
+} */
 
 /********************************/
 
@@ -287,6 +317,10 @@ form {
     border-bottom: 5px double #42611F;
 }
 
+.slotContainerMargin {
+    margin-bottom: 5px;
+}
+
 /* Gradient Style */
 
 .gradient {
@@ -296,15 +330,8 @@ form {
     /* height: 302px; */
     padding: 0px;
     margin: 0px;
+    margin-bottom: 10px;
     border-radius: 10%;
-}
-
-/********************************/
-
-/* Save Button Styles */
-
-.save-margin {
-    margin: 5px 0px;
 }
 
 /*****************************/
@@ -324,6 +351,7 @@ form {
 .search-box {
     background-color: none;
     margin-top: 0px;
+    margin-bottom: 30px
 }
 
 #searchTerm {
@@ -407,7 +435,7 @@ form {
     width: 10rem;
     height: 10rem;
     margin: 5px auto;
-    margin-top: 5px
+    margin-top: 5px;
 }
 
 .card-body {
@@ -492,6 +520,10 @@ form {
     left: 65%;
 }
 
+/* .carousel-container {
+    margin-top: 30px;
+} */
+
 .carousel-control-prev {
     display: block;
     width: 0px;
@@ -500,7 +532,7 @@ form {
 
 .carousel-control-prev-icon {
     /* margin-right: 120px; */
-    margin-top: 150px;
+    margin-top: 110px;
     background-color: rgb(118, 173, 55);
     border-radius: 50%;
     width: 30px;
@@ -518,7 +550,7 @@ form {
 
 .carousel-control-next-icon {
     margin-left: -28px;
-    margin-top: 150px;
+    margin-top: 110px;
     background-color: rgb(118, 173, 55);
     border-radius: 50%;
     width: 30px;
@@ -577,10 +609,15 @@ form {
 .closeButton {
     color: #000000;
     font-size: 30px;
+    border: none;
+    text-decoration: none;
+    display: block;
 }
 
 .closeButton:hover, .closeButton:focus {
     color: #fff;
+    border: none;
+    text-decoration: none;
 }
 
 .ks-button-close {
@@ -626,6 +663,7 @@ form {
 
 .closeButton-logs:hover, .closeButton-logs:focus {
     color: #fff;
+    border: none;
 }
 
 .modal-content-logs {

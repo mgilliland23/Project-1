@@ -38,6 +38,15 @@
     <script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-firestore.js"></script>
 
+    <!-- Favicon  Link-->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon_package_v0.16 (2)/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon_package_v0.16 (2)/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon_package_v0.16 (2)/favicon-16x16.png">
+    <link rel="manifest" href="assets/favicon_package_v0.16 (2)/site.webmanifest">
+    <link rel="mask-icon" href="assets/favicon_package_v0.16 (2)/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#00aba9">
+    <meta name="theme-color" content="#ffffff">
+
 
 
 </head>
@@ -47,7 +56,7 @@
     <header class="">
         <nav class="navbar navbar-expand-md h-font navbar-light ">
             <div class="navbar-brand">
-                <h1 href="#" class="nav float-left icon ">HH</h1>
+                <h1 href="#" class="nav float-left icon animated">Health <img class="HHlogo animated bounceInDown slow" src="assets/images/apple-large.png"> Hero</h1>
             </div>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -75,8 +84,8 @@
             <div class="col-md-12 border text-center">
                 <!-- Week Cards -->
                 <!---------------------------------------->
-                <button type="button" name="weekButton" class="ks-weekButtons ks-weekButtons-toggle selectedDay"
-                    id="Monday">
+                <button type="button" name="weekButton"
+                    class="ks-weekButtons ks-weekButtons-toggle selectedDay" id="Monday">
                     <div class="week-cards">
                         <div class="">
                             <h5 class="card-title text-center">Monday</h5>
@@ -84,7 +93,8 @@
                     </div>
                 </button>
 
-                <button type="button" name="weekButton" class="ks-weekButtons ks-weekButtons-toggle" id="Tuesday">
+                <button type="button" name="weekButton" class="ks-weekButtons ks-weekButtons-toggle"
+                    id="Tuesday">
                     <div class="week-cards">
                         <div class="">
                             <h5 class="card-title text-center">Tuesday</h5>
@@ -92,7 +102,8 @@
                     </div>
                 </button>
 
-                <button type="button" name="weekButton" class="ks-weekButtons ks-weekButtons-toggle" id="Wednesday">
+                <button type="button" name="weekButton" class="ks-weekButtons ks-weekButtons-toggle"
+                    id="Wednesday">
                     <div class="week-cards">
                         <div class="">
                             <h5 class="card-title text-center">Wednesday</h5>
@@ -100,7 +111,8 @@
                     </div>
                 </button>
 
-                <button type="button" name="weekButton" class="ks-weekButtons ks-weekButtons-toggle" id="Thursday">
+                <button type="button" name="weekButton" class="ks-weekButtons ks-weekButtons-toggle"
+                    id="Thursday">
                     <div class="week-cards">
                         <div class="">
                             <h5 class="card-title text-center">Thursday</h5>
@@ -108,7 +120,8 @@
                     </div>
                 </button>
 
-                <button type="button" name="weekButton" class="ks-weekButtons ks-weekButtons-toggle" id="Friday">
+                <button type="button" name="weekButton" class="ks-weekButtons ks-weekButtons-toggle"
+                    id="Friday">
                     <div class="week-cards">
                         <div class="">
                             <h5 class="card-title text-center">Friday</h5>
@@ -116,7 +129,8 @@
                     </div>
                 </button>
 
-                <button type="button" name="weekButton" class="ks-weekButtons ks-weekButtons-toggle" id="Saturday">
+                <button type="button" name="weekButton" class="ks-weekButtons ks-weekButtons-toggle"
+                    id="Saturday">
                     <div class="week-cards">
                         <div class="">
                             <h5 class="card-title text-center">Saturday</h5>
@@ -124,7 +138,8 @@
                     </div>
                 </button>
 
-                <button type="button" name="weekButton" class="ks-weekButtons ks-weekButtons-toggle" id="Sunday">
+                <button type="button" name="weekButton" class="ks-weekButtons ks-weekButtons-toggle"
+                    id="Sunday">
                     <div class="week-cards">
                         <div class="">
                             <h5 class="card-title text-center">Sunday</h5>
@@ -136,28 +151,30 @@
             </div>
         </div>
         <!--Day Plan-->
+        <div class="ks-container slotContainerMargin">
+            <div class="row" id="dailyMealsContainer">
 
-        <div class="row ks-container" id="dailyMealsContainer">
-
-            <div class="col-md-4 text-center">
-                <h2 class="meal-header">Breakfast</h2>
-                <div id="breakfast" class="holder meal-holder element mx-auto animated fadeInLeftBig gradient">
-                    <!-- <h2>DRAG MEAL HERE</h2> -->
+                <div class="col-lg-4 text-center">
+                    <h2 class="meal-header">Breakfast</h2>
+                    <div id="breakfast" class="holder meal-holder element mx-auto animated fadeInLeftBig gradient">
+                        <!-- <h2>DRAG MEAL HERE</h2> -->
+                    </div>
                 </div>
-            </div>
 
-            <div class="col-md-4 text-center">
-                <h2 class="meal-header">Lunch</h2>
-                <div id="lunch" class="holder meal-holder element mx-auto animated fadeInUpBig gradient">
-                    <!-- <h2>DRAG MEAL HERE</h2> -->
+                <div class="col-lg-4 text-center">
+                    <h2 class="meal-header">Lunch</h2>
+                    <div id="lunch" class="holder meal-holder element mx-auto animated fadeInUpBig gradient">
+                        <!-- <h2>DRAG MEAL HERE</h2> -->
+                    </div>
                 </div>
-            </div>
 
-            <div class="col-md-4 text-center">
-                <h2 class="meal-header">Dinner</h2>
-                <div id="dinner" class="holder meal-holder element mx-auto animated fadeInRightBig gradient">
-                    <!-- <h2>DRAG MEAL HERE</h2> -->
+                <div class="col-lg-4 text-center">
+                    <h2 class="meal-header">Dinner</h2>
+                    <div id="dinner" class="holder meal-holder element mx-auto animated fadeInRightBig gradient">
+                        <!-- <h2>DRAG MEAL HERE</h2> -->
+                    </div>
                 </div>
+
             </div>
 
         </div>
@@ -166,6 +183,7 @@
         <div class="row ks-container carousel-container mt-3">
 
             <div class="col-md-12 border text-center mx-auto">
+
                 <div id="carouselExampleControls" class="carousel slide carousel-container">
                     <div class="carousel-inner slideContainer">
                         <div id="searchResults" class="container imageContainer mx-auto">
@@ -186,8 +204,9 @@
                         <span class="sr-only">Next</span>
                     </a>
                 </div>
+
                 <form class="form-inline justify-content-center search-box">
-                    <label class="form-group">Search Recipes</label>
+                    <label class="form-group"></label>
                     <div class="form-group mx-sm-3 mb-2 mt-2">
                         <label for="searchTerm" class="sr-only">Search Recipes</label>
                         <input type="text" class="form-control" id="searchTerm"
@@ -231,7 +250,7 @@
 
     <!-- Footer -->
     <footer class=" text-center mt-auto">
-        <div>© 2019 Health Hero</div>
+        <div class="h-font footerText">© 2019 Health<img class="HHlogoFooter" src="assets/images/apple-large.png">Hero</div>
     </footer>
     <!--Simple script to toggle classes on heart icon-->
     <script>
