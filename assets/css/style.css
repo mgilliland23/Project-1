@@ -270,21 +270,21 @@ button div div h5 {
     transform: none;
 }
 
-.ks-weekButtons:focus {
+/* .ks-weekButtons:focus {
     background-color: #42611F;
     outline: 0;
     border-style: outset;
     border-color: rgba(255, 255, 255, 0.5);
-    /* transform: translate(0px, 5px); */
+    transform: translate(0px, 5px);
 }
 
 .ks-weekButtons:active {
     color: #fff;
     background-color: #42611F;
     border-color: #42611F;
-    /* transform: translate(0px, 5px); */
+    transform: translate(0px, 5px);
     cursor: progress;
-}
+} */
 
 /********************************/
 
