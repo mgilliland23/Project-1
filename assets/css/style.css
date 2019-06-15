@@ -275,14 +275,14 @@ button div div h5 {
     outline: 0;
     border-style: outset;
     border-color: rgba(255, 255, 255, 0.5);
-    transform: translate(0px, 5px);
+    /* transform: translate(0px, 5px); */
 }
 
 .ks-weekButtons:active {
     color: #fff;
     background-color: #42611F;
     border-color: #42611F;
-    transform: translate(0px, 5px);
+    /* transform: translate(0px, 5px); */
     cursor: progress;
 }
 
@@ -318,25 +318,21 @@ button div div h5 {
     border-bottom: 5px double #42611F;
 }
 
+.slotContainerMargin {
+    margin-bottom: 5px;
+}
+
 /* Gradient Style */
 
 .gradient {
     width: 14rem;
-    height: 18.5rem;
+    height: 16rem;
     /* width: 202px; */
     /* height: 302px; */
     padding: 0px;
     margin: 0px;
     margin-bottom: 10px;
     border-radius: 10%;
-}
-
-/********************************/
-
-/* Save Button Styles */
-
-.save-margin {
-    margin: 5px 0px;
 }
 
 /*****************************/
@@ -360,7 +356,7 @@ button div div h5 {
 }
 
 #searchTerm {
-    width: 16rem;
+    width: 24rem;
 }
 
 .ks-button-form-submit {
@@ -416,7 +412,7 @@ button div div h5 {
     /* width: 202px; */
     /* height: 302px; */
     width: 14rem;
-    height: 18.5rem;
+    height: 16rem;
     margin: auto;
     float: left;
     margin-bottom: 10px;
@@ -435,10 +431,10 @@ button div div h5 {
 .card-img-top {
     /* width: 202px; */
     /* height: 124px; */
-    width: 12rem;
-    height: 12rem;
+    width: 10rem;
+    height: 10rem;
     margin: 5px auto;
-    margin-top: 13px
+    margin-top: 5px;
 }
 
 .card-body {
@@ -523,9 +519,9 @@ button div div h5 {
     left: 73%;
 }
 
-.carousel-container {
+/* .carousel-container {
     margin-top: 30px;
-}
+} */
 
 .carousel-control-prev {
     display: block;
@@ -535,7 +531,7 @@ button div div h5 {
 
 .carousel-control-prev-icon {
     /* margin-right: 120px; */
-    margin-top: 150px;
+    margin-top: 110px;
     background-color: rgb(118, 173, 55);
     border-radius: 50%;
     width: 30px;
@@ -553,7 +549,7 @@ button div div h5 {
 
 .carousel-control-next-icon {
     margin-left: -28px;
-    margin-top: 150px;
+    margin-top: 110px;
     background-color: rgb(118, 173, 55);
     border-radius: 50%;
     width: 30px;
