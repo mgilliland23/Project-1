@@ -47,7 +47,9 @@ function buildShoppingList() {
 
     weekdays.forEach(function (weekday) {
         retrieveRecipesFromDB(weekday);
-    })
+    });
+
+    printShoppingList();
 }
 
 //Display the Shopping List on the page
@@ -80,7 +82,6 @@ function retrieveRecipesFromDB(day) {
 
 //Parse the ingredient line from the recipe to make it more readable
 function parseIngredients(ingredients) {
-
     ingredients.forEach(function (ingredient) {
         var parsedIngredient = '';
         //Strip out the measurements and additional instructions for each ingredient line
@@ -92,6 +93,7 @@ function parseIngredients(ingredients) {
         parsedIngredient = parsedIngredient.split(',')[0];
         addToShoppingList(parsedIngredient);
     });
+
 
 }
 
@@ -107,5 +109,4 @@ function addToShoppingList(item) {
         shoppingList.push(item);
     }
 
-    console.log(shoppingList);
 }
