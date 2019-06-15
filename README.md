@@ -4,6 +4,9 @@ A meal planner with the ability to drag and drop for each day of the week in bre
 ## Images
 <img src="assets/images/screenshot-of-home.jpg" width="500">
 
+## Site Link
+https://mgilliland23.github.io/Project-1/index.html
+
 ## Built With
 
 * [Edamam Recipe Search API](https://developer.edamam.com/edamam-recipe-api) - API for recipe info and search
