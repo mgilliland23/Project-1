@@ -684,3 +684,11 @@ button div div h5 {
          width: 60%;
          margin: 0 auto;
     }
+
+
+/* Validate Search*/
+#pleaseEnter {
+    margin-top: -30px;
+    margin-bottom: 5px;
+    color: red;
+}

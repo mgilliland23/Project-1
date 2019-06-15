@@ -4,7 +4,15 @@ $("#submit").on("click", function (e) {
     e.preventDefault();
 
     var query = $("#searchTerm").val();
+   
+    if (query =="") {
 
+        console.log("input something!")
+        document.getElementById('pleaseEnter').innerHTML = "* You must enter something";
+        return false
+    }
+    else {
+    $("#pleaseEnter").empty();
     console.log(query);
     var appKey = "ab75022db9057519bafaa14829512295";
     var appId = "cc950c0c";
@@ -26,6 +34,7 @@ $("#submit").on("click", function (e) {
         buildRecipeCards(recipes);
         console.log(recipes);
     });
+    }
 });
 
 function truncate(word) {
