@@ -417,6 +417,8 @@ button div div h5 {
     margin-bottom: 10px;
     /* margin: 0px 5px;  */
     cursor: grabbing;
+    background-color:rgba(255, 255, 255, 0.5);
+    border-radius: 10%;
 }
 
 .ks-card:hover {
@@ -497,8 +499,8 @@ button div div h5 {
     position: absolute;
     display: block;
     cursor: pointer;
-    top: -175%;
-    left: 77%;
+    top: -170%;
+    left: 65%;
 }
 
 .favoriteButton:hover {
@@ -514,8 +516,8 @@ button div div h5 {
     position: absolute;
     display: block;
     cursor: pointer;
-    top: -180%;
-    left: 73%;
+    top: -170%;
+    left: 65%;
 }
 
 #signUpMessage {
@@ -675,3 +677,14 @@ button div div h5 {
 .recipe-link {
     display: none;
 }
+
+/* Shopping List styles*/
+
+    .shop-list-group {
+    
+    }
+    .shop-list-item {
+         background-color: rgba(255, 255, 255, 0.3);
+         width: 60%;
+         margin: 0 auto;
+    }

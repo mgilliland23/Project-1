@@ -25,13 +25,6 @@ $("#submit").on("click", function (e) {
 
         buildRecipeCards(recipes);
         console.log(recipes);
-        //Added the toggle fav function here so it can work with the loaded items
-        $('.toggleFavBut').click(function () {
-            console.log("favorited")
-            $(this).toggleClass('favoriteButton far');
-            $(this).toggleClass('favoritedButton fas fa-2x');
-        });
-
     });
 });
 
