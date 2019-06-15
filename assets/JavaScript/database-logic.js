@@ -225,7 +225,7 @@ function pushFavorites(recipe) {
 
 }
 
-var favorites = [];
+/* var favorites = [];
 //retrieve the current user's recipes from the database for the given day
  function getFavorites() {
     //  favorites.forEach(function (favorite) {
@@ -301,4 +301,4 @@ var favorites = [];
 
         $("#favorite-dump").append(recipeCard);
     });
-} 
+}  */

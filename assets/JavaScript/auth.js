@@ -44,6 +44,7 @@ $("#signup").on("click", function (e) {
     var errorMessage = error.message;
     // ...
   });
+  //checkUsername()
 
 })
 
