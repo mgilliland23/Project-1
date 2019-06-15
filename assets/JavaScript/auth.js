@@ -31,6 +31,12 @@ $("#signup").on("click", function (e) {
 
   email = $("#inputUsername").val().trim();
   password = $("#inputPassword").val().trim();
+
+  if (password.length < 6) {
+    console.log("password too short");
+    $("#signUpMessage").text("Password must be at least 6 characters long.");
+    return;
+  }
   console.log(email + " " + password);
   firebase.auth().createUserWithEmailAndPassword(email, password).catch(function (error) {
     // Handle Errors here.

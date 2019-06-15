@@ -30,21 +30,24 @@ firebase.auth().onAuthStateChanged(function (user) {
     }
 });
 
+$("#logout").on("click", function (event) {
+    event.preventDefault();
+    auth.signOut().then(() => {
+        console.log('user signed out');
+    })
+    self.location.href = ("index.html"), event.preventDefault()
+});
+
 var weekdays = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Satruday', 'Sunday'];
 var shoppingList = [];
 
 
 //Create a shopping list from all the recipes saved for each day of the week
 function buildShoppingList() {
-    var index = 0;
+
     weekdays.forEach(function (weekday) {
         retrieveRecipesFromDB(weekday);
-        index++;
-        console.log(index);
-    });
-    if (index === 7) {
-        printShoppingList();
-    }
+    })
 }
 
 //Display the Shopping List on the page
@@ -63,12 +66,11 @@ function printShoppingList() {
 //Retrieve all of the recipes the user has saved for each day
 function retrieveRecipesFromDB(day) {
 
-    firebase.database().ref('Users/' + userID + '/weeklyPlan/' + day).once('value').then(function (snapshot) {
+    firebase.database().ref(userID + '/' + day).once('value').then(function (snapshot) {
+
         snapshot.forEach(function (child) {
             //This is the recipe object that we use through out the application
             var recipe = child.val().recipe
-            console.log(recipe);
-
             parseIngredients(recipe.ingredientLines);
         });
 
@@ -104,4 +106,6 @@ function addToShoppingList(item) {
     if (!duplicate) {
         shoppingList.push(item);
     }
+
+    console.log(shoppingList);
 }

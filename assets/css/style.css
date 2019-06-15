@@ -518,6 +518,10 @@ button div div h5 {
     left: 73%;
 }
 
+#signUpMessage {
+    color: red;
+}
+
 /* .carousel-container {
     margin-top: 30px;
 } */
